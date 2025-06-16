@@ -1,0 +1,398 @@
+:root {
+  --primary: #000000;
+  --bg: #ffc580;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #000;
+  /* min-height: 6000px; */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(255, 197, 128, 0.8);
+  border-bottom: 1px solid #16a8e2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #16a8e2;
+}
+
+.navbar .navbar-nav a {
+  color: #7c97c0;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.3s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #000000;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/header-bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 40%;
+  bottom: 0;
+  z-index: 1;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 193, 112, 1) 8%,
+    rgba(255, 193, 112, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero .content h1 {
+  position: relative;
+  z-index: 3;
+  font-size: 5em;
+  color: #7c97c0;
+  text-shadow: 1px 1px 3px rgba(255, 193, 112, 1);
+}
+
+.hero .content p {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  line-height: 1.9rem;
+  font-weight: 1;
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  position: relative;
+  z-index: 3;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(255, 193, 112, 1);
+}
+
+/*  About Section */
+.about,
+.facts,
+.contact {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.facts h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.facts h2 span,
+.contact h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 30;
+  line-height: 1.6;
+}
+
+/*  Facts Section */
+.about,
+.facts,
+.contact {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.facts h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.facts h2 span,
+.contact h2 span {
+  color: var(--primary);
+}
+
+.facts .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.facts .row .facts-img {
+  flex: 1 1 25rem;
+}
+
+.facts .row .facts-img img {
+  width: 50%;
+}
+
+.facts .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.facts .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.facts .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 30;
+  line-height: 1.6;
+}
+
+.shape-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 50px;
+}
+
+<div class="facts">
+  <h2>Bangun Datar</h2>
+  <div class="row">
+    
+    <div class="shape-box">
+      <div class="square"></div>
+      <h3>PERSEGI</h3>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+
+    <div class="shape-box">
+      <div class="rectangle"></div>
+      <h3>PERSEGI PANJANG</h3>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+
+    <div class="shape-box">
+      <div class="triangle"></div>
+      <h3>SEGITIGA</h3>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+
+    <div class="shape-box">
+      <div class="circle"></div>
+      <h3>LINGKARAN</h3>
+      <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+
+  </div>
+</div>
+
+/*  Contact Section */
+.contact h2 {
+  margin-bottom: 1rem;
+}
+.contact p {
+  text-align: center;
+  max-width: 38rem;
+  margin: auto;
+  font-size: 1.4rem;
+  font-weight: 1;
+  line-height: 1.6;
+}
+
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.contact .row .contact-card {
+  text-align: center;
+  padding-bottom: 4remj;
+}
+
+.contact .row .contact-card img {
+  width: 80%;
+}
+
+.contact .row .contact-card .contact-card-title {
+  margin-top: 1rem auto 0.5rem;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #7c97c0;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row.about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+}
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
